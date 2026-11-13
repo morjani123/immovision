@@ -1,9 +1,9 @@
 import type {Property} from '../types';
 const photos=[
-'photo-1600596542815-ffad4c1539a9','photo-1600607687939-ce8a6c25118c','photo-1600585154340-be6161a56a0c','photo-1600566753190-17f0baa2a6c3',
+'photo-1600596542815-ffad4c1539a9','photo-1600607687939-ce8a6c25118c','photo-1539020140153-e479b8c22e70','photo-1600566753190-17f0baa2a6c3',
 'photo-1600607687920-4e2a09cf159d','photo-1600573472591-ee6b68d14c68','photo-1600566753086-00f18fb6b3ea','photo-1600566752355-35792bedcfea',
 'photo-1600573472592-401b489a3cdc','photo-1600607687644-c7171b42498f','photo-1600596542815-ffad4c1539a9','photo-1600607687939-ce8a6c25118c'];
-const img=(id:string)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=82`;
+const img=(id:string)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=1000&q=78`;
 const rows:[string,string,string,number,number,number,number,Property['type'],Property['purpose']][]=[
 ['Villa contemporaine avec piscine','Marrakech','Palmeraie',4850000,420,5,4,'Villa','Vente'],
 ['Appartement lumineux au centre','Casablanca','Racine',2150000,145,3,2,'Appartement','Vente'],
