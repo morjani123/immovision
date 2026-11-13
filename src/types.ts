@@ -1,0 +1,1 @@
+export type Property={id:number;title:string;city:string;district:string;price:number;area:number;beds:number;baths:number;type:'Appartement'|'Villa'|'Maison'|'Riad';purpose:'Vente'|'Location';image:string;gallery:string[];featured?:boolean;description:string;amenities:string[]};
