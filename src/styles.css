@@ -4,3 +4,31 @@
 @media(max-width:760px){.header{height:72px}.logo{font-size:18px}.menu-button{display:block;margin-left:auto}.nav{display:none;position:absolute;top:72px;left:0;right:0;background:white;padding:24px;box-shadow:0 12px 20px #0c23311a;flex-direction:column;align-items:stretch;gap:20px}.nav.open{display:flex}.hero{min-height:690px}.hero-content{padding:55px 0 70px}.hero h1{font-size:46px}.search-panel{grid-template-columns:1fr 1fr;gap:8px}.search-panel label{border-right:0;border-bottom:1px solid #eaeaea;padding:12px}.search-panel button{grid-column:span 2}.property-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding:65px 0}.section-top{align-items:start;flex-direction:column}.concept-grid{grid-template-columns:1fr}.concept-photo{height:350px}.city-grid{grid-template-columns:1fr 1fr}.filters{grid-template-columns:1fr 1fr}.gallery{height:340px}.detail-layout{grid-template-columns:1fr;gap:25px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:span 2}}
 @media(max-width:520px){.container{width:calc(100% - 32px)}.hero h1{font-size:39px}.hero-content>p{font-size:13px}.search-panel{grid-template-columns:1fr}.search-panel button{grid-column:auto}.hero-foot{gap:12px;font-size:8px}.property-grid{grid-template-columns:1fr}.card-media{height:245px}.concept-stats{gap:18px}.city-grid{grid-template-columns:1fr}.city-tile{height:215px}.filters{grid-template-columns:1fr}.explore-head,.detail-heading{align-items:start;flex-direction:column}.gallery{grid-template-columns:1fr;height:auto}.gallery-main{height:270px}.gallery-thumbs{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;height:90px}.detail-price{font-size:22px}.detail-features{gap:14px}.contact-form{padding:20px}.form-row{grid-template-columns:1fr}.footer-grid{gap:30px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* ImmoVision V2: advanced search, interactive map, motion and accessibility */
+.advanced-filters{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.advanced-filters label{min-width:0}
+.advanced-filters input,.advanced-filters select{width:100%;min-width:0;border:1px solid #e3e5e6;background:#fff;padding:13px 12px;color:#22394a;outline-color:#b9985d;border-radius:0}
+.advanced-filters .search-filter{grid-column:span 2}
+.advanced-filters .clear-filters{align-self:end;min-height:44px;border:1px solid #b9985d;background:transparent;color:#9c7843;font-size:12px;font-weight:800;padding:12px}
+.map-toggle{display:inline-flex;align-items:center;gap:9px;background:#10283f;color:#fff;border:0;padding:13px 18px;font-size:12px;font-weight:800}
+.map-shell{background:#fff;border:1px solid #ece8e0;margin:0 0 35px;overflow:hidden}
+.map-title{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 22px;color:#183247}
+.map-title>div{display:flex;align-items:center;gap:10px}
+.map-title>span{font-size:11px;color:#89959d}
+.property-map{height:430px;position:relative;z-index:1;background:#e8ebe7}
+.detail .property-map{height:310px}
+.map-bottom{padding:12px 22px;color:#8b969d;font-size:12px}
+.map-bottom a{color:#a58046;font-weight:800}
+.map-error{padding:30px;color:#9b4a42}
+.property-card{animation:rise-in .55s both}
+.property-card:nth-child(2){animation-delay:.07s}.property-card:nth-child(3){animation-delay:.14s}
+.property-card:nth-child(4){animation-delay:.21s}.property-card:nth-child(5){animation-delay:.28s}.property-card:nth-child(6){animation-delay:.35s}
+@keyframes rise-in{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #c9a66b;outline-offset:3px}
+.gallery-thumbs button:hover{opacity:1}
+@media(max-width:1050px){.advanced-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.advanced-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.map-title{align-items:flex-start;flex-direction:column}.property-map{height:350px}}
+@media(max-width:520px){.advanced-filters{grid-template-columns:1fr}.advanced-filters .search-filter{grid-column:auto}.property-map{height:300px}.detail .property-map{height:270px}.map-toggle{width:100%;justify-content:center}.explore-head{align-items:stretch}}
+@media(prefers-reduced-motion:reduce){.property-card{animation:none}}
