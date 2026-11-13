@@ -1,7 +1,7 @@
 import PropertyMap from './components/PropertyMap';
 import {useEffect,useMemo,useState} from 'react';import type {FormEvent} from 'react';
 import {Link,NavLink,Route,Routes,useLocation,useNavigate,useParams,useSearchParams} from 'react-router-dom';
-import {ArrowRight,ArrowUpRight,Bath,BedDouble,Building2,Check,ChevronLeft,ChevronRight,Heart,MapPin,Menu,Ruler,Search,SlidersHorizontal,X,Map as MapIcon} from 'lucide-react';
+import {ArrowRight,ArrowUpRight,Bath,BedDouble,Building2,Check,ChevronLeft,ChevronRight,Heart,MapPin,Menu,Ruler,Search,X,Map as MapIcon} from 'lucide-react';
 import {properties,formatPrice} from './data/properties';import type {Property} from './types';
 const cities=['Toutes les villes','Casablanca','Marrakech','Rabat','Tanger','Fès','Meknès'];
 function useFavorites(){const [ids,setIds]=useState<number[]>(()=>{try{return JSON.parse(localStorage.getItem('immovision-favorites')||'[]')}catch{return []}});useEffect(()=>localStorage.setItem('immovision-favorites',JSON.stringify(ids)),[ids]);return {ids,toggle:(id:number)=>setIds(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id])}}
