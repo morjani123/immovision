@@ -28,7 +28,9 @@ npm run preview
 
 ## Déploiement
 
-Vite utilise `base: './'` pour les ressources. Les routes utilisent BrowserRouter : sur GitHub Pages, prévoir une règle de fallback `404.html` ou migrer vers HashRouter pour éviter les 404 après rechargement d'une URL profonde.
+Vite utilise `base: './'`. La navigation utilise `HashRouter` pour garder les routes fonctionnelles sur GitHub Pages, même après rechargement.
+
+Un workflow `.github/workflows/deploy.yml` exécute l'installation, le build et le déploiement sur les runners GitHub. Dans **Settings → Pages**, choisir **GitHub Actions** comme source. Aucun `npm install` local n'est nécessaire pour publier le site.
 
 ## À venir
 
